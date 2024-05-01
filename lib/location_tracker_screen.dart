@@ -48,8 +48,10 @@ class _LocationTrackerScreenState extends State<LocationTrackerScreen> {
 
   Future<void> _setCurrentPosition()async{
     currentPosition = await Geolocator.getCurrentPosition();
-    latLngList.add(LatLng(currentPosition!.latitude, currentPosition!.longitude));
-    setState(() {});
+    if(currentPosition != null){
+      latLngList.add(LatLng(currentPosition!.latitude, currentPosition!.longitude));
+      setState(() {});
+    }
   }
 
   @override
@@ -102,8 +104,8 @@ class _LocationTrackerScreenState extends State<LocationTrackerScreen> {
         polylines: {
           Polyline(
             polylineId: const PolylineId('PolylineId-1'),
-            color: Colors.green,
-            width: 3,
+            color: Colors.blue,
+            width: 5,
             points: latLngList,
           )
         },
