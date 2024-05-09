@@ -22,3 +22,27 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*
+  https://pub.dev/packages/google_maps_flutter:
+  set map api key:
+  ...
+  Specify your API key in the application manifest android/app/src/main/AndroidManifest.xml:
+  <manifest ...
+  <application ...
+    <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="YOUR KEY HERE"/>
+               // "AIzaSyDEp8ksfnISJtutBcNoHRaIGdf9rMllfoM" // -> ostad
+               // "AIzaSyDUsTai0oZWZ5ATZECvAfvt58OlWJdO9kQ" // -> my
+
+
+   create free key:
+https://console.cloud.google.com/
+select your project
+3 bar > apis and services > enabled api and services > maps sdk for android > enable>
+back(to https://console.cloud.google.com/) when "Payment Information Verification" shows
+console.cloud.google.com/ -> select project
+3 bar > apis and services > enabled api and services > + enable apis and services
+3 bar > apis and services > credentials > create credentials>
+api key: AIzaSyDUsTai0oZWZ5ATZECvAfvt58OlWJdO9kQ
+*/
